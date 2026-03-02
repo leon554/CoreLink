@@ -1,28 +1,22 @@
-const express = require("express")
-const mongoose = require('mongoose')
-const authRoutes = require("./routes/auth")
-const userRoutes = require("./routes/users")
+const express = require("express");
+const mongoose = require("mongoose");
+const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/users");
 const cors = require("cors");
 
-const app = express()
-app.use(cors());
-const options = [
-  cors({
-    origin: "*",
-    methods: "*",
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  }),
-];
+const app = express();
 
-app.use(options); 
-app.use(express.json()) 
-mongoose.connect(process.env.MONGO_URI)
-app.use("/auth", authRoutes)
-app.use("/api", userRoutes)
-//app.post()
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
 
+app.use(express.json());
 
-app.listen(process.env.PORT, () =>  {
-  console.log("Server is running on " + process.env.PORT)
-})
+mongoose.connect(process.env.MONGO_URI);
+
+app.use("/auth", authRoutes);
+app.use("/api", userRoutes);
+
+module.exports = app;
