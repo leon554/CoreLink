@@ -19,6 +19,10 @@ mongoose.connect(process.env.MONGO_URI);
 app.use("/auth", authRoutes);
 app.use("/api", userRoutes);
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
