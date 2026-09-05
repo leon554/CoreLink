@@ -83,3 +83,14 @@ directly exposed to the public internet.
   Docker `--build-arg`), not at container runtime — Vite bakes them into the
   static bundle during `npm run build`, so setting them under `environment:`
   in ECS/Compose has no effect on the frontend.
+
+## AWS Screen Shots
+<img width="1641" height="901" alt="Screenshot 2026-09-05 at 1 01 58 pm" src="https://github.com/user-attachments/assets/080ce22c-d5c9-48d3-99a6-a2e804c9fa0a" />
+<img width="1681" height="726" alt="Screenshot 2026-09-05 at 1 06 59 pm" src="https://github.com/user-attachments/assets/4f59d30e-be97-4158-ba0e-3b353c7600fe" />
+<img width="1626" height="622" alt="Screenshot 2026-09-05 at 1 05 26 pm" src="https://github.com/user-attachments/assets/b9b0a42b-482b-429d-b43c-767c50989c16" />
+<img width="1641" height="247" alt="Screenshot 2026-09-05 at 1 06 07 pm" src="https://github.com/user-attachments/assets/0a4e2357-46b7-4fcc-aa81-6d051f371903" />
+<img width="1670" height="199" alt="Screenshot 2026-09-05 at 1 07 30 pm" src="https://github.com/user-attachments/assets/f111be2e-683b-4ae9-b399-91eb329577bc" />
+
+
+
+
